@@ -57,11 +57,12 @@
 						class="btn btn-primary"> <input type="hidden"
 						id="hiddocNoSave" name="hiddocNoSave" value="">
 				</form>
+				<div id="alertSuccess" class="alert alert-success"></div>
+				<div id="alertError" class="alert alert-danger"></div>
 				
 </div>
 
-		<div id="alertSuccess" class="alert alert-success"></div>
-				<div id="alertError" class="alert alert-danger"></div>
+		
 
 				<div id="divDoctorGrid">
 					<%
