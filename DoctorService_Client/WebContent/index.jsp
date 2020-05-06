@@ -57,6 +57,7 @@
 						class="btn btn-primary"> <input type="hidden"
 						id="hiddocNoSave" name="hiddocNoSave" value="">
 				</form>
+				
 </div>
 
 		<div id="alertSuccess" class="alert alert-success"></div>

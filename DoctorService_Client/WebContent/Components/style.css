@@ -38,3 +38,8 @@ th, td {
     padding: 15px;
     text-align: left;
 }
+.form-content {
+    padding: 5%;
+    border: 1px solid #ced4da;
+    margin-bottom: 2%;
+}
