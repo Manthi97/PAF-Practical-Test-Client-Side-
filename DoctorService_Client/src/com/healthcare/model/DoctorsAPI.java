@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import com.healthcare.model.Doctor;
 
 /**
  * Servlet implementation class DoctorsAPI
@@ -57,7 +58,7 @@ public class DoctorsAPI extends HttpServlet {
 	protected void doPut(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Map paras = getParasMap(request);
-		String output = doctorObj.updateDoctor(paras.get("hidDoctorIDSave").toString(), paras.get("docID").toString(),
+		String output = doctorObj.updateDoctor(paras.get("hiddocNoSave").toString(), paras.get("docID").toString(),
 				paras.get("dName").toString(), paras.get("address").toString(), paras.get("contactNumber").toString(),
 				paras.get("speciality").toString(), paras.get("description").toString(),
 				paras.get("docCharges").toString(), paras.get("visitingHospitals").toString());

@@ -58,9 +58,9 @@ public class Doctor {
 			con.close();
 
 			String newDoctor = readDoctor();
-			output = "{\\\"status\\\":\\\"success\\\",\\\"data\\\": \\\"\" + newDoctor + \"\\\"}";
+			output = "{\"status\":\"success\",\"data\": \"" + newDoctor + "\"}";
 		} catch (Exception e) {
-			output = "{\\\"status\\\":\\\"sucess\\\",\\\"data\\\": \\\"Error while inserting the doctor.\\\"}";
+			output = "{\"status\":\"sucess\",\"data\": \"Error while inserting the doctor.\"}";
 			System.err.println(e.getMessage());
 		}
 		return output;
@@ -99,7 +99,7 @@ public class Doctor {
 				String visitingHospitals = rs.getString("visitingHospitals");
 
 				// Add into the html table
-				output += "<tr><td><input id='hidDoctorIDUpdate' name='hidDoctorIDUpdate' type='hidden' value='" + docNo
+				output += "<tr><td><input id='hiddocNoUpdate' name='hiddocNoUpdate' type='hidden' value='" + docNo
 						+ "'>" + docID + "</td>";
 				output += "<td>" + dName + "</td>";
 				output += "<td>" + address + "</td>";
@@ -111,12 +111,12 @@ public class Doctor {
 
 				// buttons
 				output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-secondary'></td>"
-						+ "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-docID='"
-						+ docID + "' " + "></td></tr>";	
+						+ "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-docno='"
+						+ docNo + "'>" + "</td></tr>";	
 				
 				//output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-secondary'></td>"
 						//+ "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-docID='"
-						//+ docID + "'>" + "></td></tr>";	
+						//+ docID + "'> " + "></td></tr>";	
 				
 			}
 			con.close();
@@ -163,7 +163,7 @@ public class Doctor {
 			con.close();
 
 			String newDoctor = readDoctor();
-			output = "{\\\"status\\\":\\\"success\\\", \\\"data\\\": \\\"\" + newDoctor + \"\\\"}";
+			output = "{\"status\":\"success\", \"data\": \"" + newDoctor + "\"}";
 		} catch (Exception e) {
 			output = "{\"status\":\"error\", \"data\": \"Error while updating the doctor.\"}";
 			System.err.println(e.getMessage());
@@ -193,9 +193,9 @@ public class Doctor {
 			con.close();
 
 			String newDoctor = readDoctor();
-			output = "{\\\"status\\\":\\\"success\\\", \\\"data\\\": \\\"\" + newDoctor + \"\\\"}";
+			output = "{\"status\":\"success\", \"data\": \"" + newDoctor + "\"}";
 		} catch (Exception e) {
-			output = "{\\\"status\\\":\\\"error\\\", \\\"data\\\": \\\"Error while deleting the item.\\\"}";
+			output = "{\"status\":\"error\", \"data\": \"Error while deleting the doctor.\"}";
 			System.err.println(e.getMessage());
 		}
 		return output;
