@@ -15,41 +15,53 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-8 mt-4">
+		<div class="form">
+			<div class="col-12 mt-4">
 			<div class="note">
 				<h1 class="m-3">Doctor Details</h1> </div>
 
-				<form id="formDoctor" name="formDoctor">
+				<form id="formDoctor" name="formDoctor" class="form-content">
+				<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
 					Doctor ID: <input id="docID" name="docID" type="text"
-						class="form-control form-control-sm"> <br> Doctor
-					Name: <input id="dName" name="dName" type="text"
-						class="form-control form-control-sm"> <br> 
+						class="form-control form-control-sm"> </div>
+						 Doctor Name: <input id="dName" name="dName" type="text"
+						class="form-control form-control-sm"><div class="form-group"> 
 					Address: <input id="address" name="address" type="text"
-						class="form-control form-control-sm"> <br> Contact
+						class="form-control form-control-sm"> </div>
+						<div class="form-group"> Contact
 					Number: <input id="contactNumber" name="contactNumber" type="text"
-						class="form-control form-control-sm"> <br>
+						class="form-control form-control-sm"> </div>
+						</div>
+						<div class="col-md-6">
+						<div class="form-group">
 					Speciality: <input id="speciality" name="speciality" type="text"
-						class="form-control form-control-sm"> <br>
+						class="form-control form-control-sm"> </div>
+						<div class="form-group">
 					Description: <input id="description" name="description" type="text"
-						class="form-control form-control-sm"> <br> Doctor
+						class="form-control form-control-sm"> </div>
+						<div class="form-group">Doctor
 					Chargers: <input id="docCharges" name="docCharges"
-						type="text" class="form-control form-control-sm"> <br>
+						type="text" class="form-control form-control-sm"> </div>
+						<div class="form-group">
 					Visting Hospital Name: <input id="visitingHospitals"
 						name="visitingHospitals" type="text"
-						class="form-control form-control-sm"> <br> <input
+						class="form-control form-control-sm"></div>
+						
+						</div>
+						 
+						</div>
+						<input
 						id="btnSave" name="btnSave" type="button" value="Save"
 						class="btn btn-primary"> <input type="hidden"
 						id="hiddocNoSave" name="hiddocNoSave" value="">
 				</form>
-
-<br>
-
+</div>
 
 		<div id="alertSuccess" class="alert alert-success"></div>
 				<div id="alertError" class="alert alert-danger"></div>
 
-				<br>
-				<br>
 				<div id="divDoctorGrid">
 					<%
 						Doctor doctorObj = new Doctor();
